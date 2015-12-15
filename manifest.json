@@ -1,14 +1,29 @@
 {
   "manifest_version": 2,
-  "name": "Wikipedia with MathJax (Development version)",
-  "version": "0.0.7",
-  "description": "Renders Wikipedia equations with MathJax",
-  "web_accessible_resources": ["texvc.js"],
+  "name": "GitHub with MathJax",
+  "description": "Renders Github equations with MathJax",
+  "version": "0.1",
+  "permissions": [
+    "management",
+    "webRequest",
+    "webRequestBlocking",
+    "https://cdn.mathjax.org/*",
+    "https://github.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": ["mathjax_config.js"],
   "content_scripts": [
     {
-      "matches": ["http://*.wikipedia.org/*", "https://*.wikipedia.org/*"],
+      "matches": ["https://github.com/*"],
       "js": ["jquery-min-1.7.2.js", "content.js"],
       "run_at": "document_end"
     }
-  ]
+  ],
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png"
+   }
 }
