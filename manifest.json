@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "GitHub with MathJax",
   "description": "Renders Github equations with MathJax",
-  "version": "0.1",
+  "version": "0.1.1",
   "permissions": [
     "management",
     "webRequest",
