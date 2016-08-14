@@ -6,5 +6,6 @@ window.MathJax = {
     displayMath: [ ["$$","$$"] ],
     processEscapes: true
   },
-  "HTML-CSS": { availableFonts: ["TeX"] }
+  "HTML-CSS": { availableFonts: ["TeX"] },
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
 };
