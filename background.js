@@ -6,9 +6,9 @@ chrome.webRequest.onHeadersReceived.addListener(function(details) {
       var csp = details.responseHeaders[i].value;
  
       // append "https://mysite.com" to the authorized sites
-      csp = csp.replace('script-src', "script-src cdn.mathjax.org");
-      csp = csp.replace('style-src', 'style-src cdn.mathjax.org');
-      csp = csp.replace('font-src', 'font-src cdn.mathjax.org');
+      csp = csp.replace('script-src', "script-src cdnjs.cloudflare.com");
+      csp = csp.replace('style-src', 'style-src cdnjs.cloudflare.com');
+      csp = csp.replace('font-src', 'font-src cdnjs.cloudflare.com');
  
       details.responseHeaders[i].value = csp;
     }
