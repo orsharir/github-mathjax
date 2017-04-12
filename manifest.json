@@ -2,17 +2,10 @@
   "manifest_version": 2,
   "name": "GitHub with MathJax",
   "description": "Renders Github equations with MathJax",
-  "version": "0.1.2",
+  "version": "0.2",
   "permissions": [
-    "management",
-    "webRequest",
-    "webRequestBlocking",
     "https://github.com/*"
   ],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": true
-  },
   "web_accessible_resources": ["mathjax_config.js", "MathJax/*", "jquery-min-1.7.2.js", "dynamic_math.js"],
   "content_scripts": [
     {
