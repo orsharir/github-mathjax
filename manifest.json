@@ -7,18 +7,17 @@
     "management",
     "webRequest",
     "webRequestBlocking",
-    "https://cdnjs.cloudflare.com/*",
     "https://github.com/*"
   ],
   "background": {
     "scripts": ["background.js"],
     "persistent": true
   },
-  "web_accessible_resources": ["mathjax_config.js"],
+  "web_accessible_resources": ["mathjax_config.js", "MathJax/*", "jquery-min-1.7.2.js", "dynamic_math.js"],
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["jquery-min-1.7.2.js", "content.js"],
+      "js": ["jquery-min-1.7.2.js", "jquery.include.pack-1.1.js", "content.js"],
       "run_at": "document_end"
     }
   ],
