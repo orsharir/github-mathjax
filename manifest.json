@@ -9,7 +9,7 @@
   "web_accessible_resources": ["mathjax_config.js", "MathJax/*", "jquery-min-1.7.2.js", "dynamic_math.js"],
   "content_scripts": [
     {
-      "matches": ["https://github.com/*", "https://gist.github.com/*"],
+      "matches": ["https://github.com/*", "https://gist.github.com/*", "https://github.*/*", "https://*.github.*/*"],
       "js": ["jquery-min-1.7.2.js", "jquery.include.pack-1.1.js", "content.js"],
       "run_at": "document_end"
     }
