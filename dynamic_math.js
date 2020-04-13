@@ -1,7 +1,8 @@
 function render_preview() {
     $(".js-preview-tab").on("click", function(e) {
         function didLoadPreview() {
-            if (!$(".js-preview-tab").hasClass('selected')) {
+            let tab = $(".js-preview-tab");
+            if (!tab.hasClass('selected') && !tab.attr("aria-selected")) {
                 return;
             }
             if ($(".preview-content").attr('display') == 'none') {
