@@ -4,6 +4,8 @@ window.MathJax = {
   tex2jax: {
     inlineMath: [ ["$","$"] ],
     displayMath: [ ["$$","$$"] ],
+    ignoreClass: "application-main",
+    processClass: "markdown-body",
     processEscapes: true
   },
   imageFont: null,
